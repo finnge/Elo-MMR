@@ -28,6 +28,9 @@ Note: in theory, Elo-MMR can be applied in team competitions as well, but additi
 
 ## Getting Started
 
+> [!NOTE]
+> To start in Dev container open VS Code. Wait for dev container to build and open bash terminal
+
 First, [install Rust](https://www.rust-lang.org/tools/install). From the `multi-skill/` directory, run the command
 ```
 RUST_LOG=debug cargo run --release --bin rate mmr-fast codeforces
