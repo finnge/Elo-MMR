@@ -1,4 +1,4 @@
-cache/
+
 target/
 __pycache__/
 .ipynb_checkpoints/
@@ -13,3 +13,6 @@ experiments/testing/state-*
 *.log
 *.gz
 *.bbl
+
+!cache/sgm-202324/
+cache/codeforces
