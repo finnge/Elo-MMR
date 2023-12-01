@@ -1,0 +1,369 @@
+Running mmr algorithm on mycodeforces dataset for round 300 20 times
+Resetting data/mycodeforces
+for repeat in $(seq 1 20); do \
+	echo "Repeat $repeat of 20"; \
+	echo "Change to multi-skill directory and run mmr" ; \
+	cd multi-skill && cargo run --release --bin rate mmr mycodeforces 300; \
+	rm -rf data/mycodeforces ; \
+	cd .. ; \
+done
+Repeat 1 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:36:08.639753Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:36:20.312537Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.671117713000001 seconds.
+[2m2023-11-30T15:37:05.565463Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:37:05.566078Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:37:05.566505Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:37:05.566909Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:37:05.567331Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:37:05.567771Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:37:05.568056Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:37:05.568356Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:37:05.568697Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:37:05.568996Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:37:05.569284Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:37:05.569615Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:37:05.639933Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 2 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:37:06.086998Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:37:17.805010Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.717176714 seconds.
+[2m2023-11-30T15:37:53.914888Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:37:53.915627Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:37:53.916106Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:37:53.916370Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:37:53.916631Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:37:53.916936Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:37:53.917239Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:37:53.917540Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:37:53.917840Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:37:53.918072Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:37:53.918259Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:37:53.918454Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:37:54.006423Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 3 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:37:54.533470Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:38:06.122339Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.587751422 seconds.
+[2m2023-11-30T15:38:44.023550Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:38:44.024413Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:38:44.024716Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:38:44.025063Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:38:44.025359Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:38:44.025711Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:38:44.026074Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:38:44.026357Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:38:44.026667Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:38:44.026933Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:38:44.027191Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:38:44.027543Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:38:44.113468Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 4 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:38:44.612778Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:38:56.320714Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.706547672000001 seconds.
+[2m2023-11-30T15:39:33.698955Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:39:33.699771Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:39:33.700133Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:39:33.700423Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:39:33.700788Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:39:33.701086Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:39:33.701367Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:39:33.701643Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:39:33.701909Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:39:33.702190Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:39:33.702497Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:39:33.702787Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:39:33.786022Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 5 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:39:34.263707Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:39:45.992961Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.727760798 seconds.
+[2m2023-11-30T15:40:22.319344Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:40:22.320093Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:40:22.320397Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:40:22.320656Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:40:22.320977Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:40:22.321310Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:40:22.321584Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:40:22.321880Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:40:22.322120Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:40:22.322413Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:40:22.322654Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:40:22.322973Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:40:22.425430Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 6 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:40:22.963354Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:40:34.264107Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.299901838 seconds.
+[2m2023-11-30T15:41:08.290677Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:41:08.291613Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:41:08.291999Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:41:08.292431Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:41:08.292876Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:41:08.293264Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:41:08.293639Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:41:08.294003Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:41:08.294493Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:41:08.294945Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:41:08.295323Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:41:08.295727Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:41:08.368374Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 7 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:41:08.860012Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:41:20.334185Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.472953338 seconds.
+[2m2023-11-30T15:41:54.177363Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:41:54.178054Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:41:54.178434Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:41:54.178814Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:41:54.179729Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:41:54.180043Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:41:54.180380Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:41:54.180658Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:41:54.180943Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:41:54.181291Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:41:54.181618Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:41:54.181919Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:41:54.252198Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 8 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:41:54.739704Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:42:06.087913Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.347055672000002 seconds.
+[2m2023-11-30T15:42:39.471468Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:42:39.472211Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:42:39.472561Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:42:39.473033Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:42:39.473285Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:42:39.473585Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:42:39.473874Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:42:39.474145Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:42:39.474493Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:42:39.474836Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:42:39.475109Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:42:39.475437Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:42:39.556526Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 9 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:42:40.045849Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:42:51.301292Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.254266505 seconds.
+[2m2023-11-30T15:43:26.087500Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:43:26.088335Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:43:26.088695Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:43:26.089117Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:43:26.089354Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:43:26.089773Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:43:26.090096Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:43:26.090513Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:43:26.090831Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:43:26.091182Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:43:26.091497Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:43:26.091788Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:43:26.164269Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 10 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:43:26.612103Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:43:37.927230Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.314194589000001 seconds.
+[2m2023-11-30T15:44:13.212806Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:44:13.213817Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:44:13.214296Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:44:13.214651Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:44:13.215003Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:44:13.215351Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:44:13.215719Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:44:13.216216Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:44:13.216778Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:44:13.217095Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:44:13.217391Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:44:13.217655Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:44:13.301417Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 11 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:44:13.817046Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:44:25.193655Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.375038004 seconds.
+[2m2023-11-30T15:45:00.193333Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:45:00.194238Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:45:00.195061Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:45:00.195324Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:45:00.195700Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:45:00.195998Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:45:00.196326Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:45:00.196512Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:45:00.196785Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:45:00.197063Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:45:00.197313Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:45:00.197594Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:45:00.284596Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 12 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:45:00.757279Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:45:12.049875Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.291750339 seconds.
+[2m2023-11-30T15:45:46.938948Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:45:46.939715Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:45:46.940169Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:45:46.940449Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:45:46.940684Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:45:46.941041Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:45:46.941282Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:45:46.941623Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:45:46.941951Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:45:46.942248Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:45:46.942652Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:45:46.942847Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:45:47.012301Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 13 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:45:47.458283Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:45:58.933362Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.473917297 seconds.
+[2m2023-11-30T15:46:35.866728Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:46:35.867580Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:46:35.868137Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:46:35.868482Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:46:35.869203Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:46:35.869614Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:46:35.869917Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:46:35.870229Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:46:35.870498Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:46:35.870742Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:46:35.871041Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:46:35.871258Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:46:35.944495Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 14 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:46:36.416757Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:46:47.695219Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.277711088 seconds.
+[2m2023-11-30T15:47:22.779762Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:47:22.780660Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:47:22.780905Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:47:22.781235Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:47:22.781487Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:47:22.781748Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:47:22.782045Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:47:22.782297Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:47:22.782526Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:47:22.782806Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:47:22.783121Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:47:22.783354Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:47:22.852239Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 15 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:47:23.322754Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:47:34.615338Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.291860547 seconds.
+[2m2023-11-30T15:48:10.373621Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:48:10.374495Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:48:10.375009Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:48:10.375353Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:48:10.375673Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:48:10.376075Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:48:10.376840Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:48:10.377207Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:48:10.377584Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:48:10.377815Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:48:10.378177Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:48:10.378535Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:48:10.511954Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 16 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:48:10.992135Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:48:22.346813Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.353354338 seconds.
+[2m2023-11-30T15:48:59.034752Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:48:59.035856Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:48:59.036557Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:48:59.036956Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:48:59.037577Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:48:59.038099Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:48:59.038507Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:48:59.038746Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:48:59.039062Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:48:59.039398Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:48:59.039752Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:48:59.040214Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:48:59.131950Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 17 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:48:59.605854Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:49:11.040579Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.43390063 seconds.
+[2m2023-11-30T15:49:44.969414Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:49:44.970725Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:49:44.971030Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:49:44.971291Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:49:44.971550Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:49:44.971781Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:49:44.971971Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:49:44.972192Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:49:44.972635Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:49:44.972864Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:49:44.973240Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:49:44.973598Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:49:45.090160Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 18 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:49:45.560990Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:49:57.537936Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.975802005 seconds.
+[2m2023-11-30T15:50:31.684572Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:50:31.685392Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:50:31.685881Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:50:31.686181Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:50:31.686468Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:50:31.686738Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:50:31.687046Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:50:31.687339Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:50:31.687669Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:50:31.687969Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:50:31.688248Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:50:31.688632Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:50:31.775414Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 19 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:50:32.227139Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:50:43.409530Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.181717339 seconds.
+[2m2023-11-30T15:51:18.863786Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:51:18.864612Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:51:18.864889Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:51:18.865274Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:51:18.865669Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:51:18.865980Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:51:18.866231Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:51:18.866523Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:51:18.866785Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:51:18.867104Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:51:18.867643Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:51:18.867946Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:51:18.936987Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 20 of 20
+Change to multi-skill directory and run mmr
+[2m2023-11-30T15:51:19.401810Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:51:30.854748Z[0m [32m INFO[0m [2mrate[0m[2m:[0m EloMMR { weight_limit: 0.2, noob_delay: [], sig_limit: 80.0, drift_per_day: 0.0, split_ties: false, subsample_size: 18446744073709551615, subsample_bucket: 1e-5, variant: Logistic(1.0) }
+Finished in 11.427711588000001 seconds.
+[2m2023-11-30T15:52:05.550052Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1355.1415498338895
+[2m2023-11-30T15:52:05.553473Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:52:05.553853Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     1
+[2m2023-11-30T15:52:05.554224Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x    24
+[2m2023-11-30T15:52:05.554545Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x    76
+[2m2023-11-30T15:52:05.555027Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x   283
+[2m2023-11-30T15:52:05.555424Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   654
+[2m2023-11-30T15:52:05.555680Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x  1638
+[2m2023-11-30T15:52:05.556024Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2259
+[2m2023-11-30T15:52:05.556310Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  2999
+[2m2023-11-30T15:52:05.556677Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  3357
+[2m2023-11-30T15:52:05.556980Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  2598
+[2m2023-11-30T15:52:05.649459Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"

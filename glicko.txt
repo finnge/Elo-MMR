@@ -1,0 +1,369 @@
+Running glicko algorithm on mycodeforces dataset for round 300 20 times
+Resetting data/mycodeforces
+for repeat in $(seq 1 20); do \
+	echo "Repeat $repeat of 20"; \
+	echo "Change to multi-skill directory and run glicko" ; \
+	cd multi-skill && cargo run --release --bin rate glicko mycodeforces 300; \
+	rm -rf data/mycodeforces ; \
+	cd .. ; \
+done
+Repeat 1 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:43:52.695736Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:43:59.609111Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.912352544 seconds.
+[2m2023-11-30T14:44:57.014477Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:44:57.015411Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:44:57.015928Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:44:57.016229Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:44:57.016525Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:44:57.016804Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:44:57.017144Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:44:57.017431Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:44:57.017825Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:44:57.018203Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:44:57.018525Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:44:57.018855Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:44:57.117847Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 2 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:44:57.740561Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:45:04.703548Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.961949629 seconds.
+[2m2023-11-30T14:45:48.021563Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:45:48.022198Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:45:48.022512Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:45:48.023029Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:45:48.023424Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:45:48.023803Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:45:48.024148Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:45:48.024539Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:45:48.024919Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:45:48.025164Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:45:48.025554Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:45:48.025902Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:45:48.116208Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 3 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:45:48.724196Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:45:55.611425Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.884327795000001 seconds.
+[2m2023-11-30T14:46:39.676987Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:46:39.677757Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:46:39.678127Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:46:39.678389Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:46:39.678809Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:46:39.679267Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:46:39.679697Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:46:39.680111Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:46:39.680468Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:46:39.680813Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:46:39.681204Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:46:39.681554Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:46:39.771037Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 4 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:46:40.416934Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:46:47.232783Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.814928587000001 seconds.
+[2m2023-11-30T14:47:31.776121Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:47:31.777657Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:47:31.778073Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:47:31.778384Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:47:31.778723Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:47:31.779084Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:47:31.779428Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:47:31.779920Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:47:31.780491Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:47:31.780836Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:47:31.781271Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:47:31.781740Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:47:31.887549Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 5 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:47:32.460849Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:47:39.253174Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.791379795 seconds.
+[2m2023-11-30T14:48:22.273897Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:48:22.274809Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:48:22.275298Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:48:22.275638Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:48:22.276048Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:48:22.276350Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:48:22.276706Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:48:22.276980Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:48:22.277361Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:48:22.277679Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:48:22.277984Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:48:22.278359Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:48:22.372645Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 6 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:48:22.993880Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:48:29.841672Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.84485567 seconds.
+[2m2023-11-30T14:49:12.494069Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:49:12.494870Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:49:12.495463Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:49:12.496103Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:49:12.496618Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:49:12.496912Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:49:12.497356Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:49:12.497768Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:49:12.498667Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:49:12.498949Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:49:12.499232Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:49:12.499684Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:49:12.601048Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 7 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:49:13.128372Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:49:19.952640Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.823411753 seconds.
+[2m2023-11-30T14:50:03.823961Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:50:03.824777Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:50:03.825284Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:50:03.825691Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:50:03.825991Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:50:03.826278Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:50:03.826555Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:50:03.827157Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:50:03.827477Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:50:03.827721Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:50:03.828120Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:50:03.828507Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:50:03.921498Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 8 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:50:04.524646Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:50:11.339831Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.814342503000001 seconds.
+[2m2023-11-30T14:50:59.532415Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:50:59.533453Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:50:59.534667Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:50:59.536941Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:50:59.537548Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:50:59.537873Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:50:59.538210Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:50:59.538713Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:50:59.539151Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:50:59.540134Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:50:59.541122Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:50:59.541613Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:50:59.697996Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 9 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:51:00.370118Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:51:08.017008Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 7.6456558370000005 seconds.
+[2m2023-11-30T14:51:55.140194Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:51:55.141055Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:51:55.141568Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:51:55.142519Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:51:55.142893Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:51:55.143244Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:51:55.143589Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:51:55.143863Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:51:55.144113Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:51:55.144523Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:51:55.144811Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:51:55.145283Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:51:55.260312Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 10 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:51:56.049454Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:52:03.027408Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.977057670000001 seconds.
+[2m2023-11-30T14:52:48.495230Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:52:48.496095Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:52:48.496787Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:52:48.497288Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:52:48.497557Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:52:48.497942Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:52:48.498401Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:52:48.499010Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:52:48.499375Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:52:48.499780Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:52:48.500159Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:52:48.500628Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:52:48.593977Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 11 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:52:49.301654Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:52:56.222015Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.91944067 seconds.
+[2m2023-11-30T14:53:40.474494Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:53:40.475439Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:53:40.475822Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:53:40.476308Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:53:40.476795Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:53:40.477251Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:53:40.477585Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:53:40.477953Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:53:40.478352Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:53:40.478684Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:53:40.479021Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:53:40.479390Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:53:40.561797Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 12 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:53:41.113373Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:53:47.896474Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.782079003000001 seconds.
+[2m2023-11-30T14:54:32.048844Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:54:32.059761Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:54:32.063988Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:54:32.077215Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:54:32.081102Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:54:32.081453Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:54:32.081867Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:54:32.082231Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:54:32.082540Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:54:32.082811Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:54:32.083131Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:54:32.083465Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:54:32.187010Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 13 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:54:32.748594Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:54:39.423991Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.674524878000001 seconds.
+[2m2023-11-30T14:55:24.558917Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:55:24.559761Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:55:24.560247Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:55:24.561165Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:55:24.561419Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:55:24.561715Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:55:24.562071Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:55:24.562459Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:55:24.562935Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:55:24.563385Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:55:24.563729Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:55:24.564132Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:55:24.663672Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 14 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:55:25.255263Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:55:31.960455Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.704338753 seconds.
+[2m2023-11-30T14:56:16.939255Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:56:16.939992Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:56:16.940376Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:56:16.941228Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:56:16.941594Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:56:16.941939Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:56:16.942268Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:56:16.942540Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:56:16.942964Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:56:16.943297Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:56:16.943697Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:56:16.944037Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:56:17.058970Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 15 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:56:17.726729Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:56:24.605032Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.877165128000001 seconds.
+[2m2023-11-30T14:57:11.291318Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:57:11.292099Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:57:11.292612Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:57:11.292991Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:57:11.293250Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:57:11.293524Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:57:11.293899Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:57:11.294257Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:57:11.294621Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:57:11.295006Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:57:11.295391Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:57:11.295712Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:57:11.393148Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 16 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:57:11.955645Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:57:18.871832Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.915421419 seconds.
+[2m2023-11-30T14:58:06.215035Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:58:06.216128Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:58:06.216745Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:58:06.217142Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:58:06.217675Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:58:06.218318Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:58:06.218710Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:58:06.219673Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:58:06.220374Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:58:06.221029Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:58:06.221528Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:58:06.222100Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:58:06.339628Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 17 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:58:06.949583Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:58:13.937620Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.987169003000001 seconds.
+[2m2023-11-30T14:59:01.180321Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:59:01.181347Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:59:01.181904Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:59:01.182665Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:59:01.183040Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:59:01.183352Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:59:01.183828Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:59:01.184348Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:59:01.184686Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:59:01.185290Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:59:01.185769Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:59:01.186206Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:59:01.280108Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 18 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:59:01.933956Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T14:59:08.881857Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.946800253 seconds.
+[2m2023-11-30T14:59:57.122560Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T14:59:57.123572Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T14:59:57.124017Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T14:59:57.124440Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T14:59:57.124806Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T14:59:57.125209Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T14:59:57.125695Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T14:59:57.125992Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T14:59:57.126333Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T14:59:57.126690Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T14:59:57.127018Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T14:59:57.127694Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T14:59:57.234068Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 19 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T14:59:57.822203Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:00:04.668557Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.845416295000001 seconds.
+[2m2023-11-30T15:00:53.061615Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T15:00:53.062483Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:00:53.062943Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T15:00:53.063248Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T15:00:53.063679Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T15:00:53.064077Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T15:00:53.064381Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T15:00:53.064631Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T15:00:53.065011Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T15:00:53.065417Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T15:00:53.065778Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T15:00:53.066111Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T15:00:53.143547Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"
+Repeat 20 of 20
+Change to multi-skill directory and run glicko
+[2m2023-11-30T15:00:53.737077Z[0m [32m INFO[0m [2mmulti_skill::data_processing::dataset[0m[2m:[0m Found 301 JSON files at "../cache/mycodeforces"
+[2m2023-11-30T15:01:00.604492Z[0m [32m INFO[0m [2mrate[0m[2m:[0m Glicko { beta: 315.08922206661885, sig_drift: 35.0 }
+Finished in 6.866401545 seconds.
+[2m2023-11-30T15:01:48.799059Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m Mean rating.mu = 1433.5748599366707
+[2m2023-11-30T15:01:48.799973Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 3000 LG x     0
+[2m2023-11-30T15:01:48.800449Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2700 IG x     0
+[2m2023-11-30T15:01:48.800942Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2400 GM x     0
+[2m2023-11-30T15:01:48.801417Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2200 IM x     0
+[2m2023-11-30T15:01:48.801774Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 2000 Ma x    14
+[2m2023-11-30T15:01:48.802242Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1800 CM x   134
+[2m2023-11-30T15:01:48.802568Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1600 Ex x   504
+[2m2023-11-30T15:01:48.802840Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1400 Sp x  2646
+[2m2023-11-30T15:01:48.803207Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1200 Ap x  3258
+[2m2023-11-30T15:01:48.803494Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m 1000 Pu x  4138
+[2m2023-11-30T15:01:48.803854Z[0m [32m INFO[0m [2mmulti_skill::summary[0m[2m:[0m -999 Ne x  3195
+[2m2023-11-30T15:01:48.932849Z[0m [32m INFO[0m [2mmulti_skill::data_processing[0m[2m:[0m Successfully wrote to "../data/mycodeforces/all_players.csv"

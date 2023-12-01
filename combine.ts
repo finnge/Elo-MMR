@@ -23,7 +23,7 @@ await Promise.all(roundFiles.map(async (round,) => {
   parsed.forEach((row) => {
     const existingRatingsIndex = ratingsAsArray.findIndex((r) => r.handle === row.handle);
 
-    if (existingRatingsIndex > 0) {
+    if (existingRatingsIndex >= 0) {
       ratingsAsArray[existingRatingsIndex][roundIndexNumber] = row.display_rating
     } else {
       const newRow: Record<string, string> = { handle: row.handle, [roundIndexNumber]: row.display_rating };
@@ -33,7 +33,7 @@ await Promise.all(roundFiles.map(async (round,) => {
 
     const existingPlaceIndex = ranksAsArray.findIndex((r) => r.handle === row.handle);
 
-    if (existingPlaceIndex > 0) {
+    if (existingPlaceIndex >= 0) {
       ranksAsArray[existingPlaceIndex][roundIndexNumber] = row.rank
     } else {
       const newRow: Record<string, string> = { handle: row.handle, [roundIndexNumber]: row.rank };
@@ -53,7 +53,7 @@ const finalTextRatings = csvStringify(ratingsAsArray, {
 
 await Deno.writeTextFile(`./data/${DATASET}/combined_ratings.csv`, finalTextRatings);
 
-const finalTextRanks = csvStringify(ratingsAsArray, {
+const finalTextRanks = csvStringify(ranksAsArray, {
   header: true,
   columns: ['handle', ...Array.from({ length: highestRoundIndex }, (_, i) => i + 1).map((i) => `${i}`)],
 });

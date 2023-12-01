@@ -9,6 +9,12 @@ To start the simulation for each folder run the following command in the termina
 make run ALGORITHM=elo-mmr DATASET=dataset NUM_OF_CONTESTS=10
 ```
 
+Output terminal for time tracking
+  
+```bash
+make time ALGORITHM=glicko DATASET=mycodeforces ROUND=300 REPEATS=100 >> glicko.txt
+```
+
 
 the official readme is below...
 

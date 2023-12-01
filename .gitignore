@@ -16,3 +16,7 @@ experiments/testing/state-*
 
 !cache/sgm-202324/
 cache/codeforces
+
+input.csv
+multi-skill/glicko.txt
+.DS_Store
