@@ -39,3 +39,6 @@ combine:
 
 pgfplots:
 	deno run --allow-read --allow-write pgfplots.ts
+
+changeData:
+	deno run --allow-read --allow-write changeData.ts

@@ -1,7 +1,4 @@
-import { glob } from 'npm:glob';
 import { parse as csvParse } from 'npm:csv-parse/sync';
-import { stringify as csvStringify } from 'npm:csv-stringify/sync';
-
 
 const text = await Deno.readTextFile('input.csv');
 const parsed = csvParse(text, { columns: true, delimiter: ";" }) as Record<string, string>[];
