@@ -21,7 +21,7 @@ async function getJson(filePath: string) {
 }
 
 async function writeJson(filePath: string, data: any) {
-  return Deno.writeTextFile(filePath, JSON.stringify(data, null, 2));
+  return await Deno.writeTextFile(filePath, JSON.stringify(data, null, 2));
 }
 
 function convertRoundDataFileToOperational(data: RoundDataFile): RoundDataOperational {
@@ -99,10 +99,33 @@ function convertRoundDataOperationalToFile(data: RoundDataOperational): RoundDat
 const DATASET = "cache/mycodeforces";
 const DESTINATION = "cache/mycodeforces-volatility";
 
-const origFile = await getJson(`${DATASET}/300.json`);
+const files = glob.sync(`${DATASET}/*.json`);
 
-const convertedFile = convertRoundDataFileToOperational(origFile);
-const convertedFile2 = convertRoundDataOperationalToFile(convertedFile);
+const data: Record<number, RoundDataOperational> = {};
 
-await writeJson(`${DESTINATION}/300-operational.json`, convertedFile);
-await writeJson(`${DESTINATION}/300.json`, convertedFile2);
+await Promise.all(files.map(async (file) => {
+  const roundNumber = Number(file.match(/(\d+)\.json$/)?.[1] ?? -1);
+
+  if (roundNumber === -1) {
+    return;
+  }
+
+  const fileData = await getJson(file);
+
+  const roundData = convertRoundDataFileToOperational(fileData);
+  data[roundNumber] = roundData;
+}));
+
+Object.entries(data).forEach(async ([roundNumber, roundData]) => {
+  const fileData = convertRoundDataOperationalToFile(roundData);
+  await writeJson(`${DESTINATION}/${roundNumber}.json`, fileData);
+});
+
+
+// const origFile = await getJson(`${DATASET}/300.json`);
+
+// const convertedFile = convertRoundDataFileToOperational(origFile);
+// const convertedFile2 = convertRoundDataOperationalToFile(convertedFile);
+
+// await writeJson(`${DESTINATION}/300-operational.json`, convertedFile);
+// await writeJson(`${DESTINATION}/300.json`, convertedFile2);
