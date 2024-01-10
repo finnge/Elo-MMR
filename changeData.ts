@@ -1,4 +1,4 @@
-import { glob } from 'npm:glob';
+import { parse } from "https://deno.land/std@0.207.0/flags/mod.ts";
 
 type RoundDataFile = {
   name: string,
@@ -96,36 +96,35 @@ function convertRoundDataOperationalToFile(data: RoundDataOperational): RoundDat
   };
 }
 
-const DATASET = "cache/mycodeforces";
-const DESTINATION = "cache/mycodeforces-volatility";
-
-const files = glob.sync(`${DATASET}/*.json`);
-
-const data: Record<number, RoundDataOperational> = {};
-
-await Promise.all(files.map(async (file) => {
-  const roundNumber = Number(file.match(/(\d+)\.json$/)?.[1] ?? -1);
-
-  if (roundNumber === -1) {
-    return;
-  }
-
-  const fileData = await getJson(file);
-
-  const roundData = convertRoundDataFileToOperational(fileData);
-  data[roundNumber] = roundData;
-}));
-
-Object.entries(data).forEach(async ([roundNumber, roundData]) => {
-  const fileData = convertRoundDataOperationalToFile(roundData);
-  await writeJson(`${DESTINATION}/${roundNumber}.json`, fileData);
+const flags = parse(Deno.args, {
+  string: ["dataset", "player", "round"],
 });
 
+console.log("change data for player", flags.player, "in round", flags.round, "in dataset", flags.dataset);
 
-// const origFile = await getJson(`${DATASET}/300.json`);
 
-// const convertedFile = convertRoundDataFileToOperational(origFile);
-// const convertedFile2 = convertRoundDataOperationalToFile(convertedFile);
+const fileName = `cache/${flags.dataset}/${flags.round}.json`
+const fileContent = await getJson(fileName);
 
-// await writeJson(`${DESTINATION}/300-operational.json`, convertedFile);
-// await writeJson(`${DESTINATION}/300.json`, convertedFile2);
+const data: RoundDataOperational = convertRoundDataFileToOperational(fileContent);
+
+
+const indexWithPlayer = data.standings.findIndex((row) => {
+  return row.includes(flags.player ?? "");
+});
+
+if (indexWithPlayer !== -1) {
+
+  if (data.standings[indexWithPlayer].length === 1) {
+    data.standings.splice(indexWithPlayer, 1);
+  } else {
+    const indexWithPlayerInRow = data.standings[indexWithPlayer].indexOf(flags.player ?? "");
+    data.standings[indexWithPlayer].splice(indexWithPlayerInRow, 1);
+  }
+
+  data.standings.push([flags.player ?? ""]);
+}
+
+const fileData = convertRoundDataOperationalToFile(data);
+
+writeJson(fileName, fileData);

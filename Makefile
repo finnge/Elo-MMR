@@ -33,6 +33,47 @@ time:
 		cd .. ; \
 	done
 
+new_dataset := $(DATASET)-$(PLAYER)-$(ALGORITHM)-$(NORMAL_ROUNDS)-$(END_FARMING_ROUNDS)-$(VOLATILITY_THRESHOLD)
+
+volatility_farming:
+	@echo "Creates volatility farming dataset for $(ALGORITHM) on $(DATASET) dataset"
+
+	@echo "Player $(PLAYER) will play normal for $(NORMAL_ROUNDS) rounds and farm volatility for $(END_FARMING_ROUNDS) rounds to stay below $(VOLATILITY_THRESHOLD) volatility"
+
+	@echo "Resetting data/$(new_dataset)"
+	@rm -rf data/$(new_dataset)
+
+	@echo "Resetting cache/$(new_dataset)"
+	@rm -rf cache/$(new_dataset)
+
+	@echo "Creating cache directory cache/$(new_dataset)"
+	@mkdir -p cache/$(new_dataset)
+
+	@echo "Copy cache/$(DATASET) to cache/$(new_dataset)"
+	@cp cache/$(DATASET)/* cache/$(new_dataset)
+
+	for repeat in $$(seq $(NORMAL_ROUNDS) $(END_FARMING_ROUNDS)); do \
+		echo "Repeat $$repeat of $(END_FARMING_ROUNDS)"; \
+		echo "Change to multi-skill directory and run $(ALGORITHM)" ; \
+		cd multi-skill && cargo run --release --bin rate $(ALGORITHM) $(new_dataset) $$repeat; \
+		rm -rf data/$(new_dataset) ; \
+		cd .. ; \
+		echo "Extract volatility of player $(PLAYER)"; \
+	done
+
+# inside for loop
+# 1. run algorithm
+# 2. extract volatility of player $(PLAYER)
+# 3. check if volatility is below threshold
+# 4. if yes continue
+# 5. if no put player on last place => deno script
+
+vf_tourist_mmr: 
+	@make volatility_farming PLAYER=tourist NORMAL_ROUNDS=45 END_FARMING_ROUNDS=90 VOLATILITY_THRESHOLD=2400 ALGORITHM=mmr-fast DATASET=mycodeforces
+
+vf_tourist_glicko:
+	@make volatility_farming PLAYER=tourist NORMAL_ROUNDS=45 END_FARMING_ROUNDS=90 VOLATILITY_THRESHOLD=1600 ALGORITHM=glicko DATASET=mycodeforces
+
 
 combine:
 	deno run --allow-read --allow-write combine.ts
