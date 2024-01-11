@@ -65,6 +65,10 @@ volatility_farming:
 		cd .. ; \
 	done
 
+	@make run ALGORITHM=tcsys DATASET=$(new_dataset) NUM_OF_CONTESTS=300
+
+	@deno run --allow-read --allow-write combine.ts --dataset=$(new_dataset)
+
 # TOURIST MMR
 
 vf_tourist_mmr: 
@@ -76,23 +80,23 @@ vf_tourist_glicko:
 vf_tourist_tcsys:
 	@make volatility_farming PLAYER=tourist NORMAL_ROUNDS=45 END_FARMING_ROUNDS=90 VOLATILITY_THRESHOLD=2975 ALGORITHM=tcsys DATASET=mycodeforces
 
-run_tourist_mmr:
-	@make run ALGORITHM=mmr-fast DATASET=mycodeforces-tourist-mmr-fast-45-90-2400 NUM_OF_CONTESTS=300
+# run_tourist_mmr:
+# 	@make run ALGORITHM=mmr-fast DATASET=mycodeforces-tourist-mmr-fast-45-90-2400 NUM_OF_CONTESTS=300
 
-run_tourist_glicko:
-	@make run ALGORITHM=glicko DATASET=mycodeforces-tourist-glicko-45-90-1600 NUM_OF_CONTESTS=300
+# run_tourist_glicko:
+# 	@make run ALGORITHM=glicko DATASET=mycodeforces-tourist-glicko-45-90-1600 NUM_OF_CONTESTS=300
 
-run_tourist_tcsys:
-	@make run ALGORITHM=tcsys DATASET=mycodeforces-tourist-tcsys-45-90-2975 NUM_OF_CONTESTS=300
+# run_tourist_tcsys:
+# 	@make run ALGORITHM=tcsys DATASET=mycodeforces-tourist-tcsys-45-90-2975 NUM_OF_CONTESTS=300
 
-combine_tourist_mmr:
-	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-mmr-fast-45-90-2400
+# combine_tourist_mmr:
+# 	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-mmr-fast-45-90-2400
 
-combine_tourist_glicko:
-	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-glicko-45-90-1600
+# combine_tourist_glicko:
+# 	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-glicko-45-90-1600
 
-combine_tourist_tcsys:
-	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-tcsys-45-90-2975
+# combine_tourist_tcsys:
+# 	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-tcsys-45-90-2975
 
 combine:
 	deno run --allow-read --allow-write combine.ts
