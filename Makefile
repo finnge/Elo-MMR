@@ -52,13 +52,17 @@ volatility_farming:
 	@echo "Copy cache/$(DATASET) to cache/$(new_dataset)"
 	@cp cache/$(DATASET)/* cache/$(new_dataset)
 
+	@echo "Initially run $(ALGORITHM) on $(DATASET) dataset for $(NORMAL_ROUNDS) rounds"
+
+	@cd multi-skill && cargo run --release --bin rate $(ALGORITHM) $(new_dataset) $(NORMAL_ROUNDS) && cd ..
+
 	for repeat in $$(seq $(NORMAL_ROUNDS) $(END_FARMING_ROUNDS)); do \
 		echo "Repeat $$repeat of $(END_FARMING_ROUNDS)"; \
+		deno run --allow-read --allow-write changeDataIfVolaitlity.ts --dataset=$(new_dataset) --maxVolatility=$(VOLATILITY_THRESHOLD) --player=$(PLAYER) --round=$$repeat; \
 		echo "Change to multi-skill directory and run $(ALGORITHM)" ; \
-		cd multi-skill && cargo run --release --bin rate $(ALGORITHM) $(new_dataset) $$repeat; \
+		cd multi-skill && RUSTFLAGS="-Awarnings" cargo run --release --bin rate $(ALGORITHM) $(new_dataset) $$repeat; \
 		rm -rf data/$(new_dataset) ; \
 		cd .. ; \
-		echo "Extract volatility of player $(PLAYER)"; \
 	done
 
 # inside for loop

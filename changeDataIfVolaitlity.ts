@@ -1,4 +1,5 @@
 import { parse } from "https://deno.land/std@0.207.0/flags/mod.ts";
+import { parse as parseCsv, stringify as stringifyCsv } from "https://deno.land/std@0.207.0/csv/mod.ts";
 
 type RoundDataFile = {
   name: string,
@@ -97,8 +98,40 @@ function convertRoundDataOperationalToFile(data: RoundDataOperational): RoundDat
 }
 
 const flags = parse(Deno.args, {
-  string: ["dataset", "player", "round"],
+  string: ["dataset", "player", "round", "maxVolatility"],
 });
+
+
+// READ VOLATILITY
+
+console.log(Deno.cwd());
+
+const csvFileName = `data/${flags.dataset}/all_players.csv`
+const csvFile = await Deno.readTextFile(csvFileName);
+
+const csvData = parseCsv(csvFile, {
+  skipFirstRow: true,
+  header: ["rank","display_rating","max_rating","cur_mu","cur_sigma","num_contests","last_contest_index","last_contest_time","last_perf","last_change","handle"],
+});
+
+const csvPlayerData = csvData.find((row) => {
+  return row.handle === flags.player;
+});
+
+if (csvPlayerData === undefined) {
+  console.log("player not found in volatility data");
+  Deno.exit();
+}
+
+const volatility = Number(csvPlayerData.display_rating);
+
+if (volatility < Number(flags.maxVolatility)) {
+  console.log("volatility is alright");
+  Deno.exit();
+}
+
+
+// CHANGE DATA
 
 console.log("change data for player", flags.player, "in round", flags.round, "in dataset", flags.dataset);
 
@@ -107,7 +140,6 @@ const fileName = `cache/${flags.dataset}/${flags.round}.json`
 const fileContent = await getJson(fileName);
 
 const data: RoundDataOperational = convertRoundDataFileToOperational(fileContent);
-
 
 const indexWithPlayer = data.standings.findIndex((row) => {
   return row.includes(flags.player ?? "");
