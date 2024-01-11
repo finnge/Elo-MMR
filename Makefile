@@ -13,7 +13,7 @@ run:
 	@echo "Change to multi-skill directory and run $(ALGORITHM)"
 
 	for numOfContests in $$(seq 1 $(NUM_OF_CONTESTS)); do \
-		cd multi-skill && cargo run --release --bin rate $(ALGORITHM) $(DATASET) $$numOfContests; \
+		cd multi-skill && RUSTFLAGS="-Awarnings" cargo run --release --bin rate $(ALGORITHM) $(DATASET) $$numOfContests; \
 		mv ../data/$(DATASET)/all_players.csv ../data/$(DATASET)/rounds/scores_until_$$numOfContests.csv ; \
 		rm -rf data/$(DATASET)/players ; \
 		cd .. ; \
@@ -28,7 +28,7 @@ time:
 	for repeat in $$(seq 1 $(REPEATS)); do \
 		echo "Repeat $$repeat of $(REPEATS)"; \
 		echo "Change to multi-skill directory and run $(ALGORITHM)" ; \
-		cd multi-skill && cargo run --release --bin rate $(ALGORITHM) $(DATASET) $(ROUND); \
+		cd multi-skill && RUSTFLAGS="-Awarnings" cargo run --release --bin rate $(ALGORITHM) $(DATASET) $(ROUND); \
 		rm -rf data/$(DATASET) ; \
 		cd .. ; \
 	done
@@ -65,12 +65,7 @@ volatility_farming:
 		cd .. ; \
 	done
 
-# inside for loop
-# 1. run algorithm
-# 2. extract volatility of player $(PLAYER)
-# 3. check if volatility is below threshold
-# 4. if yes continue
-# 5. if no put player on last place => deno script
+# TOURIST MMR
 
 vf_tourist_mmr: 
 	@make volatility_farming PLAYER=tourist NORMAL_ROUNDS=45 END_FARMING_ROUNDS=90 VOLATILITY_THRESHOLD=2400 ALGORITHM=mmr-fast DATASET=mycodeforces
@@ -78,12 +73,20 @@ vf_tourist_mmr:
 vf_tourist_glicko:
 	@make volatility_farming PLAYER=tourist NORMAL_ROUNDS=45 END_FARMING_ROUNDS=90 VOLATILITY_THRESHOLD=1600 ALGORITHM=glicko DATASET=mycodeforces
 
+run_tourist_mmr:
+	@make run ALGORITHM=mmr-fast DATASET=mycodeforces-tourist-mmr-fast-45-90-1600 NUM_OF_CONTESTS=300
+
+run_tourist_glicko:
+	@make run ALGORITHM=glicko DATASET=mycodeforces-tourist-glicko-45-90-1600 NUM_OF_CONTESTS=300
+
+combine_tourist_mmr:
+	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-mmr-fast-45-90-1600
+
+combine_tourist_glicko:
+	deno run --allow-read --allow-write combine.ts --dataset=mycodeforces-tourist-glicko-45-90-1600
 
 combine:
 	deno run --allow-read --allow-write combine.ts
 
 pgfplots:
 	deno run --allow-read --allow-write pgfplots.ts
-
-changeData:
-	deno run --allow-read --allow-write changeData.ts

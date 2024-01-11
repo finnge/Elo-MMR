@@ -1,8 +1,16 @@
+import { parse } from "https://deno.land/std@0.207.0/flags/mod.ts";
 import { glob } from 'npm:glob';
 import { parse as csvParse } from 'npm:csv-parse/sync';
 import { stringify as csvStringify } from 'npm:csv-stringify/sync';
 
-const DATASET = 'mycodeforces';
+const flags = parse(Deno.args, {
+  string: ["dataset"],
+});
+
+
+const DATASET = flags.dataset ?? "";
+
+console.log(`Combining data for dataset ${DATASET}...`);
 
 const roundFiles = glob.sync(`./data/${DATASET}/rounds/*.csv`);
 
